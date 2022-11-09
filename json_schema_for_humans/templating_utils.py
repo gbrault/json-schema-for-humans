@@ -68,7 +68,10 @@ def get_type_name(schema_node: "SchemaNode") -> Optional[str]:
 
     type_names = [_add_subtype_if_array(type_name) for type_name in type_names]
     
-    if len(type_names) < 2:
+    if len(type_names) == 0:
         return None
+    
+    if len(type_names) < 2:
+        return type_names[0]
 
     return ", ".join(type_names[:-1]) + (" or " if len(type_names) > 1 else "") + type_names[-1]
