@@ -315,7 +315,7 @@ def _load_schema_from_uri(schema_uri: str, loaded_schemas: Dict[str, Any]) -> Op
                     loaded_schema = yaml.safe_load(schema_fp)
     except Exception as e:
         logging.warning(f"Error loading schema from uri {schema_uri}: {e}")
-        return None
+        return {}
 
     loaded_schemas[schema_uri] = loaded_schema
     return loaded_schema
