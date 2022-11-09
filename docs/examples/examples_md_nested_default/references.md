@@ -19,11 +19,10 @@
 - [13. [Optional] Property root > multi_hierarchy_reference](#multi_hierarchy_reference)
   - [13.1. [Optional] Property root > multi_hierarchy_reference > propertyA](#multi_hierarchy_reference_propertyA)
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Testing $ref
 
@@ -33,57 +32,56 @@
 </summary>
 <blockquote>
 
-|                |                    |
-| -------------- | ------------------ |
-| **Type**       | `string`           |
-| **Required**   | No                 |
-| **Defined in** | #/definitions/gift |
-
-**Description:** A gift, or is it?
-
-</blockquote>
-</details>
-
-<details>
-<summary><strong> <a name="file_prefix"></a>2. [Optional] Property root > file_prefix</strong>  
-
-</summary>
-<blockquote>
-
-|                        |                   |
-| ---------------------- | ----------------- |
-| **Type**               | `string`          |
-| **Required**           | No                |
-| **Same definition as** | [a_gift](#a_gift) |
-
-**Description:** A gift, or is it?
-
-</blockquote>
-</details>
-
-<details>
-<summary><strong> <a name="anchor_with_slash"></a>3. [Optional] Property root > anchor_with_slash</strong>  
-
-</summary>
-<blockquote>
-
-|                           |                                                                           |
+| Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/gift                                                        |
+|                           |                                                                           |
+
+**Description:** A gift, or is it?
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="file_prefix"></a>1. [Optional] Property root > file_prefix</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/gift                                                        |
+|                           |                                                                           |
+
+**Description:** A gift, or is it?
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="anchor_with_slash"></a>2. [Optional] Property root > anchor_with_slash</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/object_def                                                  |
+|                           |                                                                           |
 
 <details>
-<summary><strong> <a name="anchor_with_slash_propertyA"></a>3.1. [Optional] Property root > anchor_with_slash > propertyA</strong>  
+<summary><strong> <a name="anchor_with_slash_propertyA"></a>2.1. [Optional] Property root > anchor_with_slash > propertyA</strong>  
 
 </summary>
 <blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Description for object_def/items/propertyA
 
@@ -94,16 +92,16 @@
 </details>
 
 <details>
-<summary><strong> <a name="anchor_no_slash"></a>4. [Optional] Property root > anchor_no_slash</strong>  
+<summary><strong> <a name="anchor_no_slash"></a>3. [Optional] Property root > anchor_no_slash</strong>  
 
 </summary>
 <blockquote>
 
-|                |                        |
-| -------------- | ---------------------- |
-| **Type**       | `array of string`      |
-| **Required**   | No                     |
-| **Defined in** | #definitions/array_def |
+| Type                      | `array of string`                                                         |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #definitions/array_def                                                    |
+|                           |                                                                           |
 
 **Description:** Description for array_def
 
@@ -114,36 +112,37 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 </blockquote>
 </details>
 
 <details>
-<summary><strong> <a name="anchor_nested_reference"></a>5. [Optional] Property root > anchor_nested_reference</strong>  
+<summary><strong> <a name="anchor_nested_reference"></a>4. [Optional] Property root > anchor_nested_reference</strong>  
 
 </summary>
 <blockquote>
 
-|                |                             |
-| -------------- | --------------------------- |
-| **Type**       | `string`                    |
-| **Required**   | No                          |
-| **Defined in** | #/definitions/reference_def |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/definitions/reference_def                                               |
+|                           |                                                                           |
 
 </blockquote>
 </details>
 
 <details>
-<summary><strong> <a name="same_file_anchor_with_slash"></a>6. [Optional] Property root > same_file_anchor_with_slash</strong>  
+<summary><strong> <a name="same_file_anchor_with_slash"></a>5. [Optional] Property root > same_file_anchor_with_slash</strong>  
 
 </summary>
 <blockquote>
 
-|                |                                         |
-| -------------- | --------------------------------------- |
-| **Type**       | `string`                                |
-| **Required**   | No                                      |
-| **Defined in** | references.json#/definitions/string_def |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | references.json#/definitions/string_def                                   |
+|                           |                                                                           |
 
 **Description:** Description for string_def
 
@@ -151,61 +150,59 @@
 </details>
 
 <details>
-<summary><strong> <a name="same_file_anchor_no_slash"></a>7. [Optional] Property root > same_file_anchor_no_slash</strong>  
+<summary><strong> <a name="same_file_anchor_no_slash"></a>6. [Optional] Property root > same_file_anchor_no_slash</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [anchor_with_slash](#anchor_with_slash)                                   |
-
-</blockquote>
-</details>
-
-<details>
-<summary><strong> <a name="same_file_nested_reference"></a>8. [Optional] Property root > same_file_nested_reference</strong>  
-
-</summary>
-<blockquote>
-
-|                        |                                                     |
-| ---------------------- | --------------------------------------------------- |
-| **Type**               | `string`                                            |
-| **Required**           | No                                                  |
-| **Same definition as** | [anchor_nested_reference](#anchor_nested_reference) |
-
-</blockquote>
-</details>
-
-<details>
-<summary><strong> <a name="other_file_anchor"></a>9. [Optional] Property root > other_file_anchor</strong>  
-
-</summary>
-<blockquote>
-
 |                           |                                                                           |
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="same_file_nested_reference"></a>7. [Optional] Property root > same_file_nested_reference</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Same definition as**    | [anchor_nested_reference](#anchor_nested_reference)                       |
+|                           |                                                                           |
+
+</blockquote>
+</details>
+
+<details>
+<summary><strong> <a name="other_file_anchor"></a>8. [Optional] Property root > other_file_anchor</strong>  
+
+</summary>
+<blockquote>
+
+| Type                      | `object`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | with_descriptions.json#/definitions/gift                                  |
+|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
 <details>
-<summary><strong> <a name="other_file_anchor_with_wrap"></a>9.1. [Optional] Property root > other_file_anchor > with_wrap</strong>  
+<summary><strong> <a name="other_file_anchor_with_wrap"></a>8.1. [Optional] Property root > other_file_anchor > with_wrap</strong>  
 
 </summary>
 <blockquote>
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `boolean` |
-| **Required** | No        |
+| Type                      | `boolean`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>
@@ -214,17 +211,16 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_dot_anchor"></a>10. [Optional] Property root > other_file_dot_anchor</strong>  
+<summary><strong> <a name="other_file_dot_anchor"></a>9. [Optional] Property root > other_file_dot_anchor</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
+|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -232,17 +228,16 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_dot_dot_anchor"></a>11. [Optional] Property root > other_file_dot_dot_anchor</strong>  
+<summary><strong> <a name="other_file_dot_dot_anchor"></a>10. [Optional] Property root > other_file_dot_dot_anchor</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Same definition as**    | [other_file_anchor](#other_file_anchor)                                   |
+|                           |                                                                           |
 
 **Description:** The delivery is a gift, no prices displayed
 
@@ -250,38 +245,36 @@
 </details>
 
 <details>
-<summary><strong> <a name="other_file_only"></a>12. [Optional] Property root > other_file_only</strong>  
+<summary><strong> <a name="other_file_only"></a>11. [Optional] Property root > other_file_only</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | combining_not.json                                                        |
+|                           |                                                                           |
 
 **Description:** Test schema with a not
 
 <details>
-<summary><strong> <a name="other_file_only_not_a_string"></a>12.1. [Required] Property root > other_file_only > not_a_string</strong>  
+<summary><strong> <a name="other_file_only_not_a_string"></a>11.1. [Required] Property root > other_file_only > not_a_string</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `combining`                                                               |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `combining`                                                               |
-| **Required**              | Yes                                                                       |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
-#### <a name="autogenerated_heading_2"></a>12.1.1. Must **not** be
+#### <a name="autogenerated_heading_2"></a>11.1.1. Must **not** be
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 </blockquote>
 </details>
@@ -290,28 +283,27 @@
 </details>
 
 <details>
-<summary><strong> <a name="multi_hierarchy_reference"></a>13. [Optional] Property root > multi_hierarchy_reference</strong>  
+<summary><strong> <a name="multi_hierarchy_reference"></a>12. [Optional] Property root > multi_hierarchy_reference</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | reference_schemas/intermediate.json#/properties/cross_file_reference      |
+|                           |                                                                           |
 
 <details>
-<summary><strong> <a name="multi_hierarchy_reference_propertyA"></a>13.1. [Optional] Property root > multi_hierarchy_reference > propertyA</strong>  
+<summary><strong> <a name="multi_hierarchy_reference_propertyA"></a>12.1. [Optional] Property root > multi_hierarchy_reference > propertyA</strong>  
 
 </summary>
 <blockquote>
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Contents of propertyA in final.json
 

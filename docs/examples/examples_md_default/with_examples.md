@@ -1,17 +1,16 @@
 # Person
 
-- [1. Property `Person > firstName`](#firstName)
-- [2. Property `Person > lastName`](#lastName)
-- [3. Property `Person > age`](#age)
-- [4. Property `Person > moreInfo`](#moreInfo)
+- [1. [Optional] Property `Person > firstName`](#firstName)
+- [2. [Optional] Property `Person > lastName`](#lastName)
+- [3. [Optional] Property `Person > age`](#age)
+- [4. [Optional] Property `Person > moreInfo`](#moreInfo)
 
 **Title:** Person
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | Property                   | Pattern | Type    | Deprecated | Definition | Title/Description                   |
 | -------------------------- | ------- | ------- | ---------- | ---------- | ----------------------------------- |
@@ -19,15 +18,16 @@
 | - [lastName](#lastName )   | No      | string  | No         | -          | Person                              |
 | - [age](#age )             | No      | integer | No         | -          | Person                              |
 | - [moreInfo](#moreInfo )   | No      | object  | No         | -          | Any more info you want as an object |
+|                            |         |         |            |            |                                     |
 
-## <a name="firstName"></a>1. Property `Person > firstName`
+## <a name="firstName"></a>1. [Optional] Property `Person > firstName`
 
 **Title:** Person
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** the person's first name
 
@@ -41,14 +41,14 @@
 "BDFL"
 ```
 
-## <a name="lastName"></a>2. Property `Person > lastName`
+## <a name="lastName"></a>2. [Optional] Property `Person > lastName`
 
 **Title:** Person
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** The person's last name.
 
@@ -58,16 +58,21 @@
 "Van Rossum"
 ```
 
-## <a name="age"></a>3. Property `Person > age`
+## <a name="age"></a>3. [Optional] Property `Person > age`
 
 **Title:** Person
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `integer` |
-| **Required** | No        |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Age in years which must be equal to or greater than zero.
+
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
+|              |        |
 
 **Example:** 
 
@@ -75,17 +80,12 @@
 64
 ```
 
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 0 |
+## <a name="moreInfo"></a>4. [Optional] Property `Person > moreInfo`
 
-## <a name="moreInfo"></a>4. Property `Person > moreInfo`
-
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Any more info you want as an object
 

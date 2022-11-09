@@ -23,10 +23,6 @@
         }
       },
       "additionalProperties": true
-    },
-    "anInt": {
-      "type": "integer",
-      "description": "This is an integer, it should not show additional properties. (issue #132)"
     }
   },
   "additionalProperties": {

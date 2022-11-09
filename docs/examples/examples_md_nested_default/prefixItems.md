@@ -4,11 +4,10 @@
 
 **Title:** Address
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="address"></a>1. [Optional] Property Address > address</strong>  
@@ -16,10 +15,10 @@
 </summary>
 <blockquote>
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+| Type                      | `array`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -28,6 +27,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | True               |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 **Example:** 
 

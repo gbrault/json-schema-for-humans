@@ -6,11 +6,10 @@
 
 **Title:** User Preference
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="favorite_os"></a>1. [Optional] Property User Preference > favorite_os</strong>  
@@ -18,11 +17,11 @@
 </summary>
 <blockquote>
 
-|              |                    |
-| ------------ | ------------------ |
-| **Type**     | `enum (of string)` |
-| **Required** | No                 |
-| **Default**  | `"Linux"`          |
+| Type                      | `enum (of string)`                                                        |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Linux"`                                                                 |
+|                           |                                                                           |
 
 Must be one of:
 * "Windows"
@@ -38,11 +37,11 @@ Must be one of:
 </summary>
 <blockquote>
 
-|              |                             |
-| ------------ | --------------------------- |
-| **Type**     | `array of enum (of string)` |
-| **Required** | No                          |
-| **Default**  | `["white", "blue"]`         |
+| Type                      | `array of enum (of string)`                                               |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `["white", "blue"]`                                                       |
+|                           |                                                                           |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -51,6 +50,7 @@ Must be one of:
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 </blockquote>
 </details>
@@ -61,16 +61,17 @@ Must be one of:
 </summary>
 <blockquote>
 
-|              |           |
-| ------------ | --------- |
-| **Type**     | `integer` |
-| **Required** | No        |
-| **Default**  | `2`       |
+| Type                      | `integer`                                                                 |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `2`                                                                       |
+|                           |                                                                           |
 
 | Restrictions |        |
 | ------------ | ------ |
 | **Minimum**  | &ge; 0 |
 | **Maximum**  | &le; 2 |
+|              |        |
 
 </blockquote>
 </details>

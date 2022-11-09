@@ -7,10 +7,10 @@
 
 **Title:** Test
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 <details>
 <summary><strong> <a name="aProperty"></a>1. [Optional] Property Test > aProperty</strong>  
@@ -18,11 +18,12 @@
 </summary>
 <blockquote>
 
-|                |                           |
-| -------------- | ------------------------- |
-| **Type**       | `enum (of string)`        |
-| **Default**    | `"Default from property"` |
-| **Defined in** | #/definitions/aProperty   |
+| Type                      | `enum (of string)`                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from property"`                                                                                           |
+| **Defined in**            | #/definitions/aProperty                                                                                             |
+|                           |                                                                                                                     |
 
 **Description:** This is the description from the definition
 
@@ -39,12 +40,12 @@ Must be one of:
 </summary>
 <blockquote>
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `{"a": "a", "b": "b"}`                                                                                                            |
-| **Defined in**            | #/definitions/aDictProperty                                                                                                       |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `{"a": "a", "b": "b"}`                                                                                              |
+| **Defined in**            | #/definitions/aDictProperty                                                                                         |
+|                           |                                                                                                                     |
 
 <details>
 <summary><strong> <a name="aDictPropertyARequired_a"></a>2.1. [Required] Property Test > aDictPropertyARequired > a</strong>  
@@ -52,9 +53,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 </blockquote>
 </details>
@@ -65,9 +67,10 @@ Must be one of:
 </summary>
 <blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 </blockquote>
 </details>

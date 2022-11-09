@@ -2,15 +2,12 @@
 
 - [1. [Optional]~~ Property root > deprecated1~~](#deprecated1)
 - [2. [Optional]~~ Property root > deprecated2~~](#deprecated2)
-- [3. [Optional]~~ Property root > deprecated3~~](#deprecated3)
-- [4. [Optional]~~ Property root > deprecated4~~](#deprecated4)
-- [5. [Optional] Property root > not_deprecated](#not_deprecated)
+- [3. [Optional] Property root > not_deprecated](#not_deprecated)
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Test schema with deprecated in description
 
@@ -20,12 +17,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** [Deprecated]
 
@@ -38,12 +34,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** [Deprecated - Use `not_deprecated` instead]
 
@@ -51,51 +46,15 @@
 </details>
 
 <details>
-<summary><strong> <a name="deprecated3"></a>3. [Optional]~~ Property root > deprecated3~~</strong>  
+<summary><strong> <a name="not_deprecated"></a>3. [Optional] Property root > not_deprecated</strong>  
 
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `string`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Deprecated**            | [Deprecated]                                                              |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-
-**Description:** This is [Deprecated]
-
-</blockquote>
-</details>
-
-<details>
-<summary><strong> <a name="deprecated4"></a>4. [Optional]~~ Property root > deprecated4~~</strong>  
-
-</summary>
-<blockquote>
-
 |                           |                                                                           |
-| ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
-| **Deprecated**            | [Deprecated]                                                              |
-| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
-
-**Description:** This is [Deprecated - Use `not_deprecated` instead]
-
-</blockquote>
-</details>
-
-<details>
-<summary><strong> <a name="not_deprecated"></a>5. [Optional] Property root > not_deprecated</strong>  
-
-</summary>
-<blockquote>
-
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
 
 </blockquote>
 </details>

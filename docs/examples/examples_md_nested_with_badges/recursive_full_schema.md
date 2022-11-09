@@ -6,10 +6,10 @@
 
 **Title:** Bug
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** Display the issue.
 
@@ -19,9 +19,10 @@
 </summary>
 <blockquote>
 
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
+| Type                      | `string`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** Code property
 
@@ -34,9 +35,10 @@
 </summary>
 <blockquote>
 
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
+| Type                      | `array`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** RecursiveArray property
 
@@ -47,6 +49,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 </blockquote>
 </details>
@@ -57,9 +60,10 @@
 </summary>
 <blockquote>
 
-|          |                   |
-| -------- | ----------------- |
-| **Type** | `array of object` |
+| Type                      | `array of object`                                                                                                   |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** DecoratedRecursiveArray property
 
@@ -70,6 +74,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 </blockquote>
 </details>

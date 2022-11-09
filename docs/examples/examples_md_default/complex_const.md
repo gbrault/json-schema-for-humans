@@ -4,25 +4,26 @@
 - [2. Property `root > oneOf > 2nd constant`](#oneOf_i1)
 - [3. Property `root > oneOf > 0`](#oneOf_i2)
 
-|              |             |
-| ------------ | ----------- |
-| **Type**     | `combining` |
-| **Required** | No          |
+| Type                      | `combining`                                                               |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | One of(Option)            |
 | ------------------------- |
 | [1st constant](#oneOf_i0) |
 | [2nd constant](#oneOf_i1) |
 | [0](#oneOf_i2)            |
+|                           |
 
 ## <a name="oneOf_i0"></a>1. Property `root > oneOf > 1st constant`
 
 **Title:** 1st constant
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `const` |
-| **Required** | No      |
+| Type                      | `const`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 Specific value: `[
     1,
@@ -33,10 +34,10 @@ Specific value: `[
 
 **Title:** 2nd constant
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `const` |
-| **Required** | No      |
+| Type                      | `const`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 Specific value: `{
     "a_key": "a_value",
@@ -47,10 +48,10 @@ Specific value: `{
 
 **Title:** 0
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `const` |
-| **Required** | No      |
+| Type                      | `const`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 Specific value: `0`
 
@@ -61,6 +62,7 @@ Specific value: `0`
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
+|                      |                    |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

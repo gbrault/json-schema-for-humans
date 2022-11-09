@@ -4,11 +4,10 @@
 - [2. [Optional] Property root > addressLines](#addressLines)
 - [3. [Optional] Property root > arrayEmpty](#arrayEmpty)
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** A little food fun
 
@@ -18,10 +17,10 @@
 </summary>
 <blockquote>
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+| Type                      | `array`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -30,6 +29,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | True               |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 **Example:** 
 
@@ -52,10 +52,10 @@
 </summary>
 <blockquote>
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+| Type                      | `array`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** list of address lines
 
@@ -66,6 +66,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 </blockquote>
 </details>
@@ -76,10 +77,10 @@
 </summary>
 <blockquote>
 
-|              |         |
-| ------------ | ------- |
-| **Type**     | `array` |
-| **Required** | No      |
+| Type                      | `array`                                                                   |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** This is not a valid JSON Schema, but let's do it anyway.
 
@@ -90,6 +91,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
+|                      |                    |
 
 </blockquote>
 </details>

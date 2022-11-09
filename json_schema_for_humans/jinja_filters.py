@@ -19,7 +19,7 @@ from json_schema_for_humans.schema.schema_node import SchemaNode
 
 SHORT_DESCRIPTION_NUMBER_OF_LINES = 8
 DEFAULT_PATTERN = r"(\[Default - `([^`]+)`\])"
-DEPRECATED_MARKER = r"[Deprecated"
+DEPRECATED_PATTERN = r"\[Deprecated"
 
 
 def is_combining(schema_node: SchemaNode) -> bool:
@@ -46,7 +46,7 @@ def is_deprecated_look_in_description(schema_node: SchemaNode) -> bool:
     if const.DESCRIPTION not in schema_node.keywords:
         return False
 
-    return bool(DEPRECATED_MARKER in schema_node.keywords[const.DESCRIPTION].literal)
+    return bool(re.match(DEPRECATED_PATTERN, schema_node.keywords[const.DESCRIPTION].literal))
 
 
 def get_required_properties(schema_node: SchemaNode) -> List[str]:
@@ -189,10 +189,7 @@ def get_numeric_restrictions_text(schema_node: SchemaNode, before_value: str = "
 
 
 def escape_property_name_for_id(property_name: str) -> str:
-    """Filter. Escape unsafe characters in a property name so that it can be used in an HTML id"""
-    if not property_name:
-        # Handle empty string as a property name
-        return ""
+    """Filter. Escape unsafe characters in a property name so that it can be used in a HTML id"""
 
     escaped = re.sub("[^0-9a-zA-Z_-]", "_", str(property_name))
     if not escaped[0].isalpha():
@@ -223,11 +220,8 @@ def highlight_json_example(example_text: str) -> str:
 
 def yaml_example(example_text: str) -> str:
     """Filter. Return a YAML version of the provided JSON text"""
-    loaded_example = json.loads(example_text)
-    if not isinstance(loaded_example, dict):
-        # YAML dump does not like things that are not object
-        return str(loaded_example)
-    return yaml.dump(loaded_example, allow_unicode=True, sort_keys=False)
+    yaml_text = yaml.dump(json.loads(example_text), allow_unicode=True)
+    return yaml_text
 
 
 def highlight_yaml_example(example_text: str) -> str:

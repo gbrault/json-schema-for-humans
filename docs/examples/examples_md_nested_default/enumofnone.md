@@ -4,11 +4,10 @@
 
 **Title:** Enum of None
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="enumOfNone"></a>1. [Optional] Property Enum of None > enumOfNone</strong>  
@@ -16,10 +15,10 @@
 </summary>
 <blockquote>
 
-|              |                  |
-| ------------ | ---------------- |
-| **Type**     | `enum (of null)` |
-| **Required** | No               |
+| Type                      | `enum (of null)`                                                          |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** enumOfNone
 

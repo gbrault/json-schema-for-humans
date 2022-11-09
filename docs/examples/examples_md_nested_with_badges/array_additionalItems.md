@@ -4,10 +4,10 @@
 - [2. [Optional] Property root > addressLines](#addressLines)
 - [3. [Optional] Property root > arrayEmpty](#arrayEmpty)
 
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| Type                      | `object`                                                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** A little food fun
 
@@ -17,9 +17,10 @@
 </summary>
 <blockquote>
 
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
+| Type                      | `array`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -28,6 +29,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | True               |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 **Example:** 
 
@@ -50,9 +52,10 @@
 </summary>
 <blockquote>
 
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
+| Type                      | `array`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** list of address lines
 
@@ -63,6 +66,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
+|                      |                    |
 
 </blockquote>
 </details>
@@ -73,9 +77,10 @@
 </summary>
 <blockquote>
 
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
+| Type                      | `array`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 **Description:** This is not a valid JSON Schema, but let's do it anyway.
 
@@ -86,6 +91,7 @@
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
+|                      |                    |
 
 </blockquote>
 </details>

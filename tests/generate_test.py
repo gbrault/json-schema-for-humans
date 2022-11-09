@@ -171,7 +171,6 @@ def test_additional_properties() -> None:
             "subType2",
             "subProp2",
             "Additional Properties",  # from subType2
-            "anInt",
             "Additional Properties",  # from top level of schema
             "propA",  # schema for top level additionalProperties
         ],
@@ -181,7 +180,6 @@ def test_additional_properties() -> None:
         [
             "A sub type with additionalProperties false.",
             "A sub type with additionalProperties true.",
-            "This is an integer, it should not show additional properties. (issue #132)",
             "additionalProperties schema.",
         ],
     )
@@ -310,17 +308,15 @@ def test_deprecated_in_description() -> None:
     """Test finding whether a property is deprecated from its description"""
     soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=True))
 
-    tests.html_schema_doc_asserts.assert_property_names(
-        soup, ["deprecated1", "deprecated2", "deprecated3", "deprecated4", "not_deprecated"]
-    )
-    tests.html_schema_doc_asserts.assert_deprecated(soup, [True, True, True, True, False])
+    tests.html_schema_doc_asserts.assert_property_names(soup, ["deprecated1", "deprecated2", "not_deprecated"])
+    tests.html_schema_doc_asserts.assert_deprecated(soup, [True, True, False])
 
 
 def test_deprecated_not_in_description() -> None:
     """Test that the deprecated badge does not get added if the option to get deprecated from description is disabled"""
     soup = generate_case("deprecated", GenerationConfiguration(deprecated_from_description=False))
 
-    tests.html_schema_doc_asserts.assert_deprecated(soup, [False] * 5)
+    tests.html_schema_doc_asserts.assert_deprecated(soup, [False] * 3)
 
 
 def test_with_special_chars() -> None:
@@ -412,8 +408,16 @@ def test_with_examples() -> None:
     ]
 
 
-def test_with_examples_as_yaml() -> None:
-    soup = generate_case("with_examples", config=GenerationConfiguration(examples_as_yaml=True))
+def test_with_urlencoded_anchor() -> None:
+    soup = generate_case("with_urlencoded_anchor")
+    property_names = soup.find_all("span", class_=["property-name"])
+    property_names_text = [pn.text for pn in property_names]
+    assert "lowerBound" in property_names_text
+    assert "upperBound" in property_names_text
+
+
+def test_with_yaml_examples() -> None:
+    soup = generate_case("with_examples", GenerationConfiguration(examples_as_yaml=True))
 
     examples_label = soup.find_all("div", class_=["badge", "badge-secondary"])
     examples_label_text = [ex.text for ex in examples_label]
@@ -421,36 +425,23 @@ def test_with_examples_as_yaml() -> None:
 
     examples_content = soup.find_all("div", class_="examples")
     examples_content_text = [ex.findChildren()[0].text for ex in examples_content]
-    assert (
-        [
-            "Guido\n",
-            "BDFL\n",
-            "Van Rossum\n",
-            "64\n",
-            """birthplace: Haarlem, Netherlands
-favorite_emoji: 🐍
-motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is
-  better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse
-  is better than dense.\\nReadability counts.\\nSpecial cases aren't special enough
-  to break the rules.\\nAlthough practicality beats purity.\\nErrors should never pass
-  silently.\\nUnless explicitly silenced.\\nIn the face of ambiguity, refuse the temptation
-  to guess.\\nThere should be one-- and preferably only one --obvious way to do it.\\nAlthough
-  that way may not be obvious at first unless you're Dutch.\\nNow is better than never.\\nAlthough
-  never is often better than *right* now.\\nIf the implementation is hard to explain,
-  it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces
-  are one honking great idea -- let's do more of those!
-""",
-        ]
-        == examples_content_text
-    )
-
-
-def test_with_urlencoded_anchor() -> None:
-    soup = generate_case("with_urlencoded_anchor")
-    property_names = soup.find_all("span", class_=["property-name"])
-    property_names_text = [pn.text for pn in property_names]
-    assert "lowerBound" in property_names_text
-    assert "upperBound" in property_names_text
+    assert examples_content_text == [
+        "Guido\n...\n",
+        "BDFL\n...\n",
+        "Van Rossum\n...\n",
+        "64\n...\n",
+        "birthplace: Haarlem, Netherlands\nfavorite_emoji: 🐍\n"
+        "motto: Beautiful is better than ugly.\\nExplicit is better than implicit.\\nSimple is\n"
+        "  better than complex.\\nComplex is better than complicated.\\nFlat is better than nested.\\nSparse\n"
+        "  is better than dense.\\nReadability counts.\\nSpecial cases aren't special enough\n"
+        "  to break the rules.\\nAlthough practicality beats purity.\\nErrors should never pass\n"
+        "  silently.\\nUnless explicitly silenced.\\nIn the face of ambiguity, refuse the temptation\n"
+        "  to guess.\\nThere should be one-- and preferably only one --obvious way to do it.\\nAlthough\n"
+        "  that way may not be obvious at first unless you're Dutch.\\nNow is better than never.\\nAlthough\n"
+        "  never is often better than *right* now.\\nIf the implementation is hard to explain,\n"
+        "  it's a bad idea.\\nIf the implementation is easy to explain, it may be a good idea.\\nNamespaces\n"
+        "  are one honking great idea -- let's do more of those!\n",
+    ]
 
 
 def test_pattern_properties() -> None:
@@ -552,8 +543,6 @@ def test_single_element_allOf() -> None:
     tests.html_schema_doc_asserts.assert_descriptions(
         soup, ["Schema containing a single-element allOf", "My string definition"]
     )
-    tests.html_schema_doc_asserts.assert_types(soup, ["object", "string", "number"])
-    tests.html_schema_doc_asserts.assert_default_values(soup, ['"hi"'])
 
 
 def test_json_with_tabs() -> None:
@@ -668,26 +657,6 @@ def test_prefix_items() -> None:
         soup, ["object", "array", "number", "string", "enum (of string)", "enum (of string)"]
     )
     tests.html_schema_doc_asserts.assert_descriptions(soup, ["followed by a string"])
-
-
-def test_empty_property_name() -> None:
-    soup = generate_case("empty_property_name")
-
-    tests.html_schema_doc_asserts.assert_property_names(soup, [""])
-    tests.html_schema_doc_asserts.assert_descriptions(soup, ["I don't know why you would want an empty property 🤷"])
-
-
-def test_broken_ref() -> None:
-    soup = generate_case("broken_ref")
-
-    tests.html_schema_doc_asserts.assert_property_names(soup, ["firstName", "lastName"])
-    tests.html_schema_doc_asserts.assert_descriptions(
-        soup,
-        [
-            "The person's first name.",
-            "😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️",
-        ],
-    )
 
 
 # TODO: test for uniqueItems

@@ -5,11 +5,10 @@
 
 **Title:** Circular reference Schema
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="person"></a>1. [Optional] Property Circular reference Schema > person</strong>  
@@ -17,12 +16,11 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/definitions/a                                                           |
+|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="person_a1"></a>1.1. [Optional] Property Circular reference Schema > person > a1</strong>  
@@ -30,12 +28,12 @@
 </summary>
 <blockquote>
 
-|                |                    |
-| -------------- | ------------------ |
-| **Type**       | `string`           |
-| **Required**   | No                 |
-| **Default**    | `"Default from c"` |
-| **Defined in** | #/definitions/b    |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+| **Default**               | `"Default from c"`                                                        |
+| **Defined in**            | #/definitions/b                                                           |
+|                           |                                                                           |
 
 **Description:** Description from b
 

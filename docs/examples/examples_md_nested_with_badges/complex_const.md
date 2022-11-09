@@ -4,9 +4,10 @@
 - [2. Property `root > oneOf > 2nd constant`](#oneOf_i1)
 - [3. Property `root > oneOf > 0`](#oneOf_i2)
 
-|          |             |
-| -------- | ----------- |
-| **Type** | `combining` |
+| Type                      | `combining`                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 <blockquote>
 
@@ -15,6 +16,7 @@
 | [1st constant](#oneOf_i0) |
 | [2nd constant](#oneOf_i1) |
 | [0](#oneOf_i2)            |
+|                           |
 
 <blockquote>
 
@@ -22,9 +24,10 @@
 
 **Title:** 1st constant
 
-|          |         |
-| -------- | ------- |
-| **Type** | `const` |
+| Type                      | `const`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 Specific value: `[
     1,
@@ -38,9 +41,10 @@ Specific value: `[
 
 **Title:** 2nd constant
 
-|          |         |
-| -------- | ------- |
-| **Type** | `const` |
+| Type                      | `const`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 Specific value: `{
     "a_key": "a_value",
@@ -54,9 +58,10 @@ Specific value: `{
 
 **Title:** 0
 
-|          |         |
-| -------- | ------- |
-| **Type** | `const` |
+| Type                      | `const`                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
+|                           |                                                                                                                     |
 
 Specific value: `0`
 
@@ -71,6 +76,7 @@ Specific value: `0`
 | **Items unicity**    | False              |
 | **Additional items** | False              |
 | **Tuple validation** | N/A                |
+|                      |                    |
 
 ----------------------------------------------------------------------------------------------------------------------------
 Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans)

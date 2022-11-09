@@ -1,6 +1,5 @@
 import copy
 import json
-import logging
 import os
 import urllib.parse
 from collections import defaultdict
@@ -40,10 +39,6 @@ def build_intermediate_representation(
     # Make sure schema_path is absolute, all symlinks are resolved
     absolute_schema_path = _get_schema_path(schema_path)
 
-    loaded_schema = _load_schema(absolute_schema_path, [], loaded_schemas)
-    if not loaded_schema:
-        raise Exception("Cannot generate documentation since root schema could not be loaded")
-
     intermediate_representation = _build_node(
         config,
         resolved_references,
@@ -54,7 +49,7 @@ def build_intermediate_representation(
         "root",
         absolute_schema_path,
         [],
-        loaded_schema,
+        _load_schema(absolute_schema_path, [], loaded_schemas),
     )
 
     return intermediate_representation
@@ -289,18 +284,16 @@ def _get_schema_path(schema_path: Union[str, Path, FileLikeType]) -> str:
         return os.path.realpath(schema_path.name)
 
 
-def _get_node_ref(schema: Optional[Union[int, str, List, Dict]]) -> str:
+def _get_node_ref(schema: Union[int, str, List, Dict]) -> str:
     if isinstance(schema, dict) and const.REF in schema:
         return schema[const.REF]
     return ""
 
 
-def _load_schema_from_uri(schema_uri: str, loaded_schemas: Dict[str, Any]) -> Optional[Union[Dict, List, str, int]]:
+def _load_schema_from_uri(schema_uri: str, loaded_schemas: Dict[str, Any]):
     if schema_uri in loaded_schemas:
         loaded_schema = loaded_schemas[schema_uri]
-        return loaded_schema
-
-    try:
+    else:
         if schema_uri.startswith("http"):
             if schema_uri.endswith(".yaml"):
                 loaded_schema = yaml.safe_load(requests.get(schema_uri).text)
@@ -313,17 +306,14 @@ def _load_schema_from_uri(schema_uri: str, loaded_schemas: Dict[str, Any]) -> Op
                     loaded_schema = json.load(schema_fp)
                 else:
                     loaded_schema = yaml.safe_load(schema_fp)
-    except Exception as e:
-        logging.warning(f"Error loading schema from uri {schema_uri}: {e}")
-        return {}
+        loaded_schemas[schema_uri] = loaded_schema
 
-    loaded_schemas[schema_uri] = loaded_schema
     return loaded_schema
 
 
 def _load_schema(
     schema_uri: str, path_to_element: List[Union[str, int]], loaded_schemas: Dict[str, Any]
-) -> Optional[Union[Dict, List, int, str]]:
+) -> Union[Dict, List, int, str]:
     """Load the schema at the provided path or URL.
 
     If the URI is for a local file, it must be a "realpath", meaning absolute and with symlinks resolved.
@@ -351,18 +341,6 @@ def _load_schema(
     return loaded_schema
 
 
-def _schema_merge(original: dict, to_merge: dict) -> None:
-    """Merge a schema recursively with another, keeping the original one when there is a conflict"""
-    for k, v in to_merge.items():
-        if k in original:
-            # If both are dict, merge them
-            if isinstance(original[k], dict) and isinstance(v, dict):
-                _schema_merge(original[k], v)
-            # Otherwise, keep the original value
-        else:
-            original[k] = v
-
-
 def _build_node(
     config: GenerationConfiguration,
     resolved_references: Dict[str, Dict[str, SchemaNode]],
@@ -373,7 +351,7 @@ def _build_node(
     breadcrumb_name: str,
     schema_file_path: str,
     path_to_element: List[Union[str, int]],
-    schema: Optional[Union[Dict, List, int, str]],
+    schema: Union[Dict, List, int, str],
     parent: Optional[SchemaNode] = None,
     parent_key: Optional[str] = None,
 ) -> SchemaNode:
@@ -406,36 +384,9 @@ def _build_node(
     if not path_to_element:
         path_to_element = [ROOT_ID]
 
-    if schema is None:
-        # Happens only when a referenced schema could not be loaded
-        # For the root schema, we fail earlier
-        if depth == 0:
-            raise AssertionError(
-                "Tried to render a schema from a file that was not found. This is an error in the lib."
-            )
-        # Return a fake node that displays an error
-        new_node.keywords[const.DESCRIPTION] = SchemaNode(
-            depth=depth + 1,
-            file="",
-            path_to_element=path_to_element + ["error"],
-            html_id=html_id + "_error",
-            breadcrumb_name="error",
-            ref_path="",
-            literal="😅 ERROR in schema generation, a referenced schema could not be loaded, no documentation here unfortunately 🏜️",
-        )
-        return new_node
-
     _record_ref(resolved_references, schema_file_path, path_to_element, new_node)
 
     if isinstance(schema, dict):
-        # Handle having oneOf or allOf with only one condition
-        if SchemaKeyword.ALL_OF.value in schema and len(schema[SchemaKeyword.ALL_OF.value]) == 1:
-            _schema_merge(schema, schema[SchemaKeyword.ALL_OF.value][0])
-            del schema[SchemaKeyword.ALL_OF.value]
-        if SchemaKeyword.ONE_OF.value in schema and len(schema[SchemaKeyword.ONE_OF.value]) == 1:
-            _schema_merge(schema, schema[SchemaKeyword.ONE_OF.value][0])
-            del schema[SchemaKeyword.ONE_OF.value]
-
         keywords = {}
         pattern_id = 1
         for schema_key, schema_value in schema.items():

@@ -3,11 +3,10 @@
 - [1. [Optional] Property root > a](#a)
 - [2. [Optional] Property root > b](#b)
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 <details>
 <summary><strong> <a name="a"></a>1. [Optional] Property root > a</strong>  
@@ -15,13 +14,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from a"`                                                        |
 | **Defined in**            | #/definitions/common                                                      |
+|                           |                                                                           |
 
 **Description:** Description of a
 
@@ -34,13 +32,12 @@
 </summary>
 <blockquote>
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
 | **Default**               | `"Default from b"`                                                        |
 | **Same definition as**    | [a](#a)                                                                   |
+|                           |                                                                           |
 
 **Description:** A common description
 

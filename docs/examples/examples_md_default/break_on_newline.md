@@ -1,25 +1,25 @@
 # Hello
 
-- [1. Property `Hello > property1`](#property1)
+- [1. [Optional] Property `Hello > property1`](#property1)
 
 **Title:** Hello
 
-|                           |                                                                           |
+| Type                      | `object`                                                                  |
 | ------------------------- | ------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                  |
-| **Required**              | No                                                                        |
 | **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 | Property                   | Pattern | Type   | Deprecated | Definition | Title/Description |
 | -------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| - [property1](#property1 ) | No      | string | No         | -          | Line1<br />Line2  |
+| - [property1](#property1 ) | No      | string | No         | -          | Line1 ...         |
+|                            |         |        |            |            |                   |
 
-## <a name="property1"></a>1. Property `Hello > property1`
+## <a name="property1"></a>1. [Optional] Property `Hello > property1`
 
-|              |          |
-| ------------ | -------- |
-| **Type**     | `string` |
-| **Required** | No       |
+| Type                      | `string`                                                                  |
+| ------------------------- | ------------------------------------------------------------------------- |
+| **Additional properties** | [[Any type: allowed]](# "Additional Properties of any type are allowed.") |
+|                           |                                                                           |
 
 **Description:** Line1
 Line2
